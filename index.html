@@ -42,11 +42,10 @@
 
     a{color:inherit; text-decoration:none}
 
-    /* ✅ Sayfayı gerçek ortalar */
     .wrap{
       max-width:1100px;
-      margin:0 auto;                 /* net ortalama */
-      padding:32px 18px 80px;        /* mobil taşma engeli */
+      margin:0 auto;
+      padding:32px 18px 80px;
     }
 
     header{
@@ -116,7 +115,6 @@
     .langs button:hover{color:var(--text); background: rgba(255,255,255,.06)}
     .langs button.active{color:#0b0d12; background: linear-gradient(135deg,var(--accent),var(--accent2));}
 
-    /* HERO */
     .hero{
       display:grid;
       grid-template-columns: 1.15fr .85fr;
@@ -211,7 +209,6 @@
     }
     .stamp b{color: rgba(233,236,245,.92)}
 
-    /* SECTIONS */
     section{margin-top: 22px;}
     .sectionTitle{
       margin: 22px 0 10px;
@@ -249,7 +246,6 @@
       font-size: 14px;
     }
 
-    /* Spotify */
     .spotifyBox{
       grid-column: span 12;
       background: rgba(17,21,38,.35);
@@ -274,7 +270,6 @@
     }
     iframe{width:100%; border:0; display:block}
 
-    /* ✅ Spor görsellerini aynı ölçü + aynı hizaya sokar */
     .gallery{
       display:grid;
       grid-template-columns:repeat(2, minmax(0, 1fr));
@@ -295,8 +290,8 @@
     }
     .gitem img{
       width:100%;
-      height: 360px;        /* ikisi aynı yükseklik */
-      object-fit:cover;     /* taşmadan kırp */
+      height: 360px;
+      object-fit:cover;
       display:block;
       transition: transform .25s ease;
     }
@@ -312,7 +307,6 @@
       font-size: 13px;
     }
 
-    /* küçük animasyon */
     .fadeUp{animation: fadeUp .65s ease both}
     @keyframes fadeUp{from{transform:translateY(10px);opacity:0}to{transform:translateY(0);opacity:1}}
   </style>
@@ -388,27 +382,23 @@
             <p data-i18n="card3p">Kürtçe müzik, ritim ve duygu.</p>
           </div>
 
-          <!-- ✅ Spotify (Müzik gerçekten burada görünür) -->
+          <!-- ✅ Spotify (Track embed) -->
           <div class="spotifyBox">
             <div class="spotifyHead">
-              <div data-i18n="spTitle">🎧 Serkan’ın Playlist’i</div>
-              <span data-i18n="spSub">https://open.spotify.com/track/5AFAsj0rsiJ7ArBW7ptdac?si=7sT5XrpzTWqpdnBWRUv4KQ</span>
+              <div data-i18n="spTitle">🎧 Serkan’ın Şarkısı</div>
+              <span data-i18n="spSub">Spotify embed ile çalar</span>
             </div>
 
-            <!-- 🔥 BURAYI DÜZENLE:
-                 Spotify playlist -> Share -> Embed playlist
-                 çıkan link: https://open.spotify.com/embed/playlist/XXXX
-            -->
             <iframe
-              title="Spotify Playlist"
-              src="SPOTIFY_EMBED_LINK_BURAYA"
+              title="Spotify Track"
+              src="https://open.spotify.com/embed/track/5AFAsj0rsiJ7ArBW7ptdac"
               height="152"
               loading="lazy"
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
             </iframe>
 
             <div style="padding:12px 14px; color:rgba(170,178,197,.85); font-size:12px; line-height:1.5">
-              <b>Not:</b> Spotify embed linkini eklemezsen burası boş görünür.
+              <b>Not:</b> Bu alan bir “track” embed’idir. İstersen playlist linki ver, tek seferde playlist’e çeviririm.
             </div>
           </div>
         </div>
@@ -449,8 +439,8 @@
         card2p: "Lorin • Rojo • Solin — evin ruhu.",
         card3t: "🎵 Müzik",
         card3p: "Kürtçe müzik, ritim ve duygu.",
-        spTitle: "🎧 Serkan’ın Playlist’i",
-        spSub: "Spotify embed linkini ekleyince çalar",
+        spTitle: "🎧 Serkan’ın Şarkısı",
+        spSub: "Spotify embed ile çalar",
         sportTitle: "Spor",
       },
       en: {
@@ -470,8 +460,8 @@
         card2p: "Lorin • Rojo • Solin — the soul of the home.",
         card3t: "🎵 Music",
         card3p: "Kurdish music, rhythm and emotion.",
-        spTitle: "🎧 Serkan’s Playlist",
-        spSub: "Add Spotify embed link to play",
+        spTitle: "🎧 Serkan’s Track",
+        spSub: "Plays via Spotify embed",
         sportTitle: "Sport",
       },
       ku: {
@@ -491,8 +481,8 @@
         card2p: "Lorin • Rojo • Solin — ruhê malê.",
         card3t: "🎵 Muzîk",
         card3p: "Muzîka Kurdî, rîtm û hest.",
-        spTitle: "🎧 Playlist a Serkan",
-        spSub: "Girêdana Spotify embed lê zêde bike da lêbide",
+        spTitle: "🎧 Strana Serkan",
+        spSub: "Bi Spotify embed lê dike",
         sportTitle: "Werzîş",
       }
     };
