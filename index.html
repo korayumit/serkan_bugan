@@ -3,618 +3,153 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Serkan Buğan | Kişisel Sayfa</title>
-  <meta name="description" content="Serkan Buğan — İstanbul Çekmeköy. Öğretmen • Müdür Yardımcısı • Spor • Kediler" />
+  <title>Serkan Buğan</title>
 
-  <!-- Fonts (free) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Great+Vibes&display=swap" rel="stylesheet">
 
   <style>
-    :root{
-      --bg:#0b0d12;
-      --card:#111526;
-      --card2:#0f1322;
-      --text:#e9ecf5;
-      --muted:#aab2c5;
-      --soft:#1a2140;
-      --accent:#7c5cff;
-      --accent2:#00d3a7;
-      --gold:#ffc76a;
-      --ring: rgba(124,92,255,.35);
-      --shadow: 0 20px 60px rgba(0,0,0,.45);
-      --shadow2: 0 12px 30px rgba(0,0,0,.35);
-      --radius: 22px;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
     body{
       margin:0;
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background:
-        radial-gradient(1200px 800px at 10% 10%, rgba(124,92,255,.18), transparent 60%),
-        radial-gradient(900px 700px at 90% 20%, rgba(0,211,167,.14), transparent 60%),
-        radial-gradient(800px 600px at 50% 100%, rgba(255,199,106,.10), transparent 55%),
-        linear-gradient(180deg, #07080c, #0b0d12 45%, #07080c);
-      color:var(--text);
-      overflow-x:hidden;
+      font-family:Inter,system-ui;
+      background:linear-gradient(180deg,#07080c,#0b0d12);
+      color:#e9ecf5;
     }
-    a{color:inherit; text-decoration:none}
-    .wrap{max-width:1100px;margin:0 auto;padding:28px 18px 80px}
-    header{
-      display:flex;align-items:center;justify-content:space-between;
-      gap:14px; padding:10px 6px 24px;
+    .wrap{max-width:1100px;margin:auto;padding:32px}
+    header{display:flex;justify-content:space-between;align-items:center}
+    .brand{font-weight:800;font-size:20px}
+    .langs button{
+      margin-left:6px;
+      border:0;
+      background:#1a2140;
+      color:white;
+      padding:6px 10px;
+      border-radius:20px;
+      cursor:pointer;
     }
-    .brand{
-      display:flex;align-items:center;gap:10px;
-    }
-    .dot{
-      width:12px;height:12px;border-radius:50%;
-      background: linear-gradient(135deg,var(--accent),var(--accent2));
-      box-shadow: 0 0 0 6px rgba(124,92,255,.08);
-    }
-    .brand strong{font-weight:800; letter-spacing:.2px}
-    .pillbar{display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end}
-    .pill{
-      padding:10px 12px;border-radius:999px;
-      background: rgba(255,255,255,.06);
-      border: 1px solid rgba(255,255,255,.09);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 10px 25px rgba(0,0,0,.25);
-      display:flex; align-items:center; gap:10px;
-    }
-    .langbtn{
-      border:0; background:transparent; color:var(--muted);
-      padding:6px 10px; border-radius:999px;
-      cursor:pointer; font-weight:700; letter-spacing:.2px;
-      transition: all .2s ease;
-    }
-    .langbtn:hover{color:var(--text); background: rgba(255,255,255,.06)}
-    .langbtn.active{color:#0b0d12; background: linear-gradient(135deg,var(--accent),var(--accent2));}
 
     .hero{
-      position:relative;
-      border-radius: var(--radius);
-      padding: 26px;
-      background:
-        radial-gradient(900px 500px at 30% 15%, rgba(124,92,255,.20), transparent 65%),
-        radial-gradient(700px 420px at 85% 20%, rgba(0,211,167,.16), transparent 65%),
-        linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
-      border: 1px solid rgba(255,255,255,.10);
-      box-shadow: var(--shadow);
-      overflow:hidden;
-    }
-    .hero::before{
-      content:"";
-      position:absolute; inset:-2px;
-      background: radial-gradient(800px 300px at 15% 10%, rgba(255,255,255,.08), transparent 60%);
-      pointer-events:none;
-    }
-    .grid{
       display:grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap:20px;
-      align-items:stretch;
+      grid-template-columns:1.1fr .9fr;
+      gap:24px;
+      margin-top:32px;
+      background:#111526;
+      border-radius:22px;
+      padding:24px;
     }
-    @media (max-width: 900px){
-      .grid{grid-template-columns:1fr}
-    }
-    .title{
-      font-size: clamp(30px, 4.3vw, 54px);
-      line-height:1.02;
-      margin: 8px 0 10px;
-      font-weight: 900;
-      letter-spacing: -0.8px;
-    }
-    .subtitle{
-      color: var(--muted);
-      font-size: 16px;
-      line-height:1.6;
-      margin:0 0 18px;
-      max-width: 62ch;
-    }
-    .badges{display:flex; gap:10px; flex-wrap:wrap; margin: 14px 0 18px;}
-    .badge{
-      padding:10px 12px; border-radius:999px;
-      background: rgba(17,21,38,.55);
-      border:1px solid rgba(255,255,255,.10);
-      color: #dfe4f7;
-      font-weight:700;
-      display:flex; align-items:center; gap:8px;
-      box-shadow: var(--shadow2);
-    }
-    .badge i{opacity:.9}
-    .ctaRow{display:flex; gap:12px; flex-wrap:wrap; margin-top: 14px;}
-    .btn{
-      display:inline-flex; align-items:center; gap:10px;
-      padding: 12px 14px;
-      border-radius: 14px;
-      border:1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.06);
-      box-shadow: 0 10px 25px rgba(0,0,0,.28);
-      font-weight:800;
-      transition: transform .15s ease, background .15s ease, border-color .15s ease;
-    }
-    .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.18)}
-    .btn.primary{
-      background: linear-gradient(135deg,var(--accent),var(--accent2));
-      color:#0b0d12;
-      border-color: rgba(255,255,255,.0);
-    }
-    .btn.primary:hover{filter: brightness(1.03)}
-    .btn small{font-weight:800; opacity:.9}
+    @media(max-width:900px){.hero{grid-template-columns:1fr}}
 
-    .photoCard{
-      border-radius: var(--radius);
-      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
-      border: 1px solid rgba(255,255,255,.10);
-      box-shadow: var(--shadow2);
-      padding: 18px;
-      display:flex;
-      flex-direction:column;
-      justify-content:space-between;
-      min-height: 100%;
-    }
-    .photo{
-      width:100%;
-      aspect-ratio: 4/3;
-      border-radius: 18px;
-      background:
-        radial-gradient(800px 350px at 30% 20%, rgba(124,92,255,.22), transparent 55%),
-        radial-gradient(700px 320px at 80% 20%, rgba(0,211,167,.18), transparent 55%),
-        linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.02));
-      border: 1px dashed rgba(255,255,255,.16);
-      display:flex; align-items:center; justify-content:center;
-      color: rgba(233,236,245,.85);
-      position:relative;
-      overflow:hidden;
-    }
+    h1{font-size:46px;margin:0}
+    p{color:#aab2c5;line-height:1.6}
+
     .photo img{
-      width:100%; height:100%; object-fit:cover;
-      display:block;
-      filter: contrast(1.05) saturate(1.05);
+      width:100%;
+      border-radius:18px;
+      object-fit:cover;
     }
-    .photo .hint{
-      position:absolute; inset:auto 14px 14px 14px;
-      font-size: 12px;
-      color: rgba(233,236,245,.78);
-      background: rgba(0,0,0,.25);
-      border: 1px solid rgba(255,255,255,.14);
-      border-radius: 999px;
-      padding: 8px 10px;
-      backdrop-filter: blur(8px);
-      text-align:center;
-    }
+
     .signature{
-      margin-top: 14px;
-      display:flex; align-items:flex-end; justify-content:space-between; gap:12px;
-      border-top: 1px solid rgba(255,255,255,.10);
-      padding-top: 14px;
+      font-family:"Great Vibes",cursive;
+      font-size:48px;
+      margin-top:12px;
     }
-    .sign{
-      font-family: "Great Vibes", cursive;
-      font-size: 44px;
-      line-height: 1;
-      letter-spacing: .3px;
-      color: rgba(233,236,245,.92);
-      text-shadow: 0 10px 30px rgba(0,0,0,.55);
-      transform: rotate(-2deg);
-    }
-    .signStamp{
-      font-size: 12px;
-      color: rgba(170,178,197,.9);
-      text-align:right;
-    }
-    .signStamp b{color: rgba(255,255,255,.92)}
-    section{margin-top: 22px;}
+
+    section{margin-top:48px}
+
     .cards{
       display:grid;
-      grid-template-columns: repeat(12,1fr);
-      gap:14px;
-      margin-top: 14px;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
     }
+    @media(max-width:900px){.cards{grid-template-columns:1fr}}
+
     .card{
-      grid-column: span 6;
-      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
-      border: 1px solid rgba(255,255,255,.10);
-      border-radius: 18px;
-      padding: 16px;
-      box-shadow: var(--shadow2);
-      position:relative;
-      overflow:hidden;
+      background:#111526;
+      border-radius:18px;
+      padding:18px;
     }
-    .card::after{
-      content:"";
-      position:absolute; inset:-2px;
-      background: radial-gradient(600px 240px at 20% 0%, rgba(255,255,255,.06), transparent 60%);
-      pointer-events:none;
-    }
-    @media (max-width: 900px){
-      .card{grid-column: span 12;}
-    }
-    .card h3{
-      margin: 0 0 8px;
-      font-size: 16px;
-      letter-spacing: .2px;
-    }
-    .card p{margin:0; color: var(--muted); line-height:1.6}
-    .kittens{
-      grid-column: span 12;
+
+    .gallery{
       display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
+      grid-template-columns:repeat(2,1fr);
+      gap:18px;
+      margin-top:18px;
     }
-    @media (max-width: 900px){
-      .kittens{grid-template-columns:1fr}
-    }
-    .kit{
-      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
-      border: 1px solid rgba(255,255,255,.10);
-      border-radius: 18px;
-      padding: 16px;
-      box-shadow: var(--shadow2);
-    }
-    .kit .top{display:flex; align-items:center; justify-content:space-between; gap:10px}
-    .kit strong{font-size: 16px;}
-    .chip{
-      font-size: 12px;
-      padding: 7px 10px;
-      border-radius: 999px;
-      background: rgba(124,92,255,.14);
-      border: 1px solid rgba(124,92,255,.25);
-      color: rgba(233,236,245,.92);
-      font-weight: 800;
-      letter-spacing:.2px;
-    }
-    .kit p{margin:10px 0 0;color:var(--muted); line-height:1.6}
+    @media(max-width:900px){.gallery{grid-template-columns:1fr}}
 
-    .spotify{
-      grid-column: span 12;
-      border-radius: 18px;
-      overflow:hidden;
-      border: 1px solid rgba(255,255,255,.10);
-      box-shadow: var(--shadow2);
-      background: rgba(17,21,38,.35);
+    .gallery img{
+      width:100%;
+      border-radius:18px;
     }
-    .spotifyHead{
-      padding: 12px 14px;
-      display:flex; align-items:center; justify-content:space-between; gap:10px;
-      border-bottom: 1px solid rgba(255,255,255,.08);
-      color: rgba(233,236,245,.92);
-    }
-    .spotifyHead span{color:var(--muted); font-size: 13px}
-    iframe{width:100%; border:0; display:block}
+
     footer{
-      margin-top: 26px;
       text-align:center;
-      color: rgba(170,178,197,.75);
-      font-size: 13px;
-    }
-
-    /* Small icon */
-    .ico{width:18px;height:18px;display:inline-block;opacity:.95}
-    .fadeUp{animation: fadeUp .7s ease both}
-    @keyframes fadeUp{
-      from{transform: translateY(10px); opacity:0}
-      to{transform: translateY(0); opacity:1}
+      color:#888;
+      margin-top:48px;
+      font-size:13px;
     }
   </style>
 </head>
 
 <body>
-  <div class="wrap">
-    <header class="fadeUp">
-      <div class="brand">
-        <span class="dot"></span>
-        <strong>Serkan Buğan</strong>
-      </div>
+<div class="wrap">
 
-      <div class="pillbar">
-        <div class="pill" aria-label="Dil seçimi">
-          <button class="langbtn active" data-lang="tr">TR</button>
-          <button class="langbtn" data-lang="en">EN</button>
-          <button class="langbtn" data-lang="ku">KU</button>
-        </div>
+<header>
+  <div class="brand">Serkan Buğan</div>
+  <div class="langs">
+    <button>TR</button>
+    <button>EN</button>
+    <button>KU</button>
+  </div>
+</header>
 
-        <a class="pill" href="https://instagram.com/serkan_bugan" target="_blank" rel="noopener">
-          <span style="font-weight:800;color:rgba(233,236,245,.92)">Instagram</span>
-          <span style="color:var(--muted)">@serkan_bugan</span>
-        </a>
-      </div>
-    </header>
+<div class="hero">
+  <div>
+    <h1>Öğretmek bir iş değil,<br>bir iz bırakma biçimi.</h1>
+    <p>
+      Ben Serkan. İstanbul Çekmeköy’de öğretmen ve müdür yardımcısıyım.
+      Çocukları, hayvanları ve kedilerimi (Lorin, Rojo, Solin) çok severim.
+      Spor ise zihnimi ve enerjimi dengede tutar.
+    </p>
 
-    <main>
-      <div class="hero fadeUp" style="animation-delay:.06s">
-        <div class="grid">
-          <div>
-            <div class="badges">
-              <div class="badge"><i>🎓</i><span data-i18n="role">Öğretmen • Müdür Yardımcısı</span></div>
-              <div class="badge"><i>📍</i><span data-i18n="loc">İstanbul • Çekmeköy</span></div>
-              <div class="badge"><i>🐾</i><span data-i18n="vibes">Çocuklar • Hayvanlar • Kediler</span></div>
-              <div class="badge"><i>💪</i><span data-i18n="sport">Spor • Disiplin • Enerji</span></div>
-              <div class="badge"><i>🎶</i><span data-i18n="music">Kürtçe Müzik • Ritm</span></div>
-            </div>
-
-            <h1 class="title" data-i18n="headline">
-              Öğretmek bir iş değil… bir iz bırakma biçimi.
-            </h1>
-
-            <p class="subtitle" data-i18n="about">
-              Ben Serkan. Öğrenmeyi ve öğretmeyi aynı anda sevenlerdenim.
-              Çocuklarla çalışmak, hayatı daha anlamlı kılıyor. Kedilerim (Lorin, Rojo, Solin) ise evin neşesi.
-              Sporda ise kafayı boşaltıp enerjiyi toparlıyorum. Bu sayfa; benim küçük dünyamın, sade ama güçlü bir özeti.
-            </p>
-
-            <div class="ctaRow">
-              <a class="btn primary" href="https://instagram.com/serkan_bugan" target="_blank" rel="noopener">
-                <span class="ico">✨</span>
-                <span data-i18n="cta1">Instagram’dan selam ver</span>
-              </a>
-
-              <a class="btn" href="#cats">
-                <span class="ico">🐾</span>
-                <span data-i18n="cta2">Kedilerle tanış</span>
-              </a>
-
-              <a class="btn" href="#playlist">
-                <span class="ico">🎧</span>
-                <span data-i18n="cta3">Playlist’e geç</span>
-              </a>
-            </div>
-          </div>
-
-          <aside class="photoCard">
-            <div class="photo" id="photoBox">
-              <!-- Optional: Add your image URL here -->
-              <!-- <img src="PROFILE_IMAGE_URL_HERE" alt="Serkan Buğan"> -->
-              <div style="text-align:center; padding:16px; max-width: 34ch;">
-                <div style="font-weight:900; font-size:16px; margin-bottom:8px;" data-i18n="photoTitle">Fotoğraf alanı</div>
-                <div style="color:rgba(170,178,197,.9); font-size:13px; line-height:1.5" data-i18n="photoHint">
-                  İstersen buraya Serkan’ın en iyi portresini koy. (Okul / günlük / samimi)
-                </div>
-              </div>
-              <div class="hint" data-i18n="photoTip">İpucu: Bu alan “hero foto” olunca sayfa 2x etkileyici olur.</div>
-            </div>
-
-            <div class="signature">
-              <div>
-                <div style="color:rgba(170,178,197,.85); font-size:12px; font-weight:800; letter-spacing:.25px" data-i18n="signLabel">
-                  İMZA
-                </div>
-                <div class="sign">Serkan</div>
-              </div>
-              <div class="signStamp">
-                <div><b data-i18n="stamp1">Serkan Buğan</b></div>
-                <div data-i18n="stamp2">İstanbul • Çekmeköy</div>
-              </div>
-            </div>
-          </aside>
-        </div>
-      </div>
-
-      <section class="fadeUp" style="animation-delay:.12s">
-        <div class="cards">
-          <div class="card">
-            <h3 data-i18n="card1t">🎯 Yaklaşım</h3>
-            <p data-i18n="card1p">
-              Samimiyet + disiplin. Çocukların güven duyduğu, ekiplerin yanında duran, işleri kolaylaştıran bir tarz.
-              İyi eğitim, iyi kalple birleşince büyüyor.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3 data-i18n="card2t">🌿 Hayat</h3>
-            <p data-i18n="card2p">
-              Hayvan sevgisi, sabır ve merhamet demek. Kediler bunu her gün hatırlatıyor.
-              Spor ise zihni “yeniden başlatma” tuşu gibi.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3 data-i18n="card3t">🏫 Eğitim</h3>
-            <p data-i18n="card3p">
-              Öğretmek; sadece anlatmak değil, cesaret vermek. Küçük bir cümle bazen bir çocuğun rotasını değiştirir.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3 data-i18n="card4t">🎵 Müzik</h3>
-            <p data-i18n="card4p">
-              Kürtçe müzikteki duygu ve ritim bambaşka. Yol, tempo ve ruh… hepsi bir araya geliyor.
-            </p>
-          </div>
-
-          <div id="cats" class="kittens">
-            <div class="kit">
-              <div class="top">
-                <strong>Lorin</strong><span class="chip" data-i18n="catChip">Ev Neşesi</span>
-              </div>
-              <p data-i18n="lorin">Meraklı, oyuncu ve “ben buradayım” diyen bakışların sahibi.</p>
-            </div>
-            <div class="kit">
-              <div class="top">
-                <strong>Rojo</strong><span class="chip" data-i18n="catChip2">Minik Patron</span>
-              </div>
-              <p data-i18n="rojo">Evin kurallarını sessizce koyar. Kısa bakışıyla bile mesaj verir.</p>
-            </div>
-            <div class="kit">
-              <div class="top">
-                <strong>Solin</strong><span class="chip" data-i18n="catChip3">Sakin Güç</span>
-              </div>
-              <p data-i18n="solin">Dingin, yumuşak, huzur gibi. Yanına gelince gün toparlanır.</p>
-            </div>
-          </div>
-
-          <div id="playlist" class="spotify">
-            <div class="spotifyHead">
-              <div style="font-weight:900" data-i18n="spTitle">🎧 Serkan’ın Playlist’i</div>
-              <span data-i18n="spSub">Spotify embed linkini yapıştırınca burada oynar</span>
-            </div>
-
-            <!-- Spotify embed: replace src below with your playlist embed URL -->
-            <!-- Example: https://open.spotify.com/embed/playlist/xxxx -->
-            <iframe
-              title="Spotify Playlist"
-              src="SPOTIFY_PLAYLIST_EMBED_URL_HERE"
-              height="152"
-              loading="lazy"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
-            </iframe>
-
-            <div style="padding:12px 14px; color:rgba(170,178,197,.85); font-size:12px; line-height:1.5">
-              <b>Not:</b> Spotify’da playlist → “Share” → “Embed playlist” deyip çıkan linki buraya koy.
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <footer class="fadeUp" style="animation-delay:.18s">
-        <div>© <span id="y"></span> Serkan Buğan • İstanbul / Çekmeköy</div>
-        <div style="margin-top:6px; opacity:.9">Made with ❤️ as a gift</div>
-      </footer>
-    </main>
+    <div class="signature">Serkan</div>
   </div>
 
-  <script>
-    // Year
-    document.getElementById("y").textContent = new Date().getFullYear();
+  <div class="photo">
+    <img src="images/1.jpg" alt="Serkan Buğan">
+  </div>
+</div>
 
-    // Simple i18n
-    const dict = {
-      tr: {
-        role: "Öğretmen • Müdür Yardımcısı",
-        loc: "İstanbul • Çekmeköy",
-        vibes: "Çocuklar • Hayvanlar • Kediler",
-        sport: "Spor • Disiplin • Enerji",
-        music: "Kürtçe Müzik • Ritm",
-        headline: "Öğretmek bir iş değil… bir iz bırakma biçimi.",
-        about:
-          "Ben Serkan. Öğrenmeyi ve öğretmeyi aynı anda sevenlerdenim. Çocuklarla çalışmak, hayatı daha anlamlı kılıyor. Kedilerim (Lorin, Rojo, Solin) ise evin neşesi. Sporda ise kafayı boşaltıp enerjiyi toparlıyorum. Bu sayfa; benim küçük dünyamın, sade ama güçlü bir özeti.",
-        cta1: "Instagram’dan selam ver",
-        cta2: "Kedilerle tanış",
-        cta3: "Playlist’e geç",
-        photoTitle: "Fotoğraf alanı",
-        photoHint: "İstersen buraya Serkan’ın en iyi portresini koy. (Okul / günlük / samimi)",
-        photoTip: "İpucu: Bu alan “hero foto” olunca sayfa 2x etkileyici olur.",
-        signLabel: "İMZA",
-        stamp1: "Serkan Buğan",
-        stamp2: "İstanbul • Çekmeköy",
-        card1t: "🎯 Yaklaşım",
-        card1p:
-          "Samimiyet + disiplin. Çocukların güven duyduğu, ekiplerin yanında duran, işleri kolaylaştıran bir tarz. İyi eğitim, iyi kalple birleşince büyüyor.",
-        card2t: "🌿 Hayat",
-        card2p:
-          "Hayvan sevgisi, sabır ve merhamet demek. Kediler bunu her gün hatırlatıyor. Spor ise zihni “yeniden başlatma” tuşu gibi.",
-        card3t: "🏫 Eğitim",
-        card3p:
-          "Öğretmek; sadece anlatmak değil, cesaret vermek. Küçük bir cümle bazen bir çocuğun rotasını değiştirir.",
-        card4t: "🎵 Müzik",
-        card4p:
-          "Kürtçe müzikteki duygu ve ritim bambaşka. Yol, tempo ve ruh… hepsi bir araya geliyor.",
-        catChip: "Ev Neşesi",
-        catChip2: "Minik Patron",
-        catChip3: "Sakin Güç",
-        lorin: "Meraklı, oyuncu ve “ben buradayım” diyen bakışların sahibi.",
-        rojo: "Evin kurallarını sessizce koyar. Kısa bakışıyla bile mesaj verir.",
-        solin: "Dingin, yumuşak, huzur gibi. Yanına gelince gün toparlanır.",
-        spTitle: "🎧 Serkan’ın Playlist’i",
-        spSub: "Spotify embed linkini yapıştırınca burada oynar",
-      },
-      en: {
-        role: "Teacher • Assistant Principal",
-        loc: "Istanbul • Çekmeköy",
-        vibes: "Kids • Animals • Cats",
-        sport: "Training • Discipline • Energy",
-        music: "Kurdish Music • Rhythm",
-        headline: "Teaching isn’t just a job… it’s a way to leave a mark.",
-        about:
-          "I’m Serkan. I love learning and teaching at the same time. Working with kids makes life feel meaningful. My cats (Lorin, Rojo, Solin) bring the joy at home. Training clears my mind and resets my energy. This page is a simple—but strong—snapshot of my world.",
-        cta1: "Say hi on Instagram",
-        cta2: "Meet the cats",
-        cta3: "Go to playlist",
-        photoTitle: "Photo area",
-        photoHint: "Drop Serkan’s best portrait here. (school / daily / friendly)",
-        photoTip: "Tip: A strong hero photo makes this page 2x more impressive.",
-        signLabel: "SIGNATURE",
-        stamp1: "Serkan Buğan",
-        stamp2: "Istanbul • Çekmeköy",
-        card1t: "🎯 Style",
-        card1p:
-          "Warmth + discipline. A grounded, supportive approach that builds trust—especially with kids. Great education grows when it meets a good heart.",
-        card2t: "🌿 Life",
-        card2p:
-          "Loving animals teaches patience and compassion. Cats remind you daily. Training is the best ‘reset button’ for the mind.",
-        card3t: "🏫 Education",
-        card3p:
-          "Teaching isn’t only explaining—it’s giving courage. A single sentence can change a child’s direction.",
-        card4t: "🎵 Music",
-        card4p:
-          "Kurdish music has a unique emotion and rhythm—road, tempo, and soul, all together.",
-        catChip: "Home Joy",
-        catChip2: "Tiny Boss",
-        catChip3: "Calm Power",
-        lorin: "Curious, playful, and proud—those eyes say “I’m here.”",
-        rojo: "Quietly sets the rules. One look is enough to deliver the message.",
-        solin: "Soft, calm, and peaceful. The day feels lighter around this one.",
-        spTitle: "🎧 Serkan’s Playlist",
-        spSub: "Paste the Spotify embed link to play it here",
-      },
-      ku: {
-        role: "Mamoste • Cîgirê Rêveberê",
-        loc: "Stenbol • Çekmeköy",
-        vibes: "Zarok • Heywan • Pisîk",
-        sport: "Werzîş • Disîplîn • Hêz",
-        music: "Muzîka Kurdî • Rîtm",
-        headline: "Mamostetî tenê kar nîne… ew şêwazek e ku şop bihêle.",
-        about:
-          "Ez Serkan im. Ez fêr bûn û fêr kirin bi heman dem hez dikim. Bi zarokan re kar kirin jiyanê watedar dike. Pisîkên min (Lorin, Rojo, Solin) jiyana malê xweş dikin. Werzîş jî hişê paqij dike û hêzê nû dide. Ev rûpel kurt e, lê bi hêz e—wêneyek ji cîhana min.",
-        cta1: "Li Instagramê silav bidê",
-        cta2: "Bi pisîkan nas bibin",
-        cta3: "Bi playlistê re",
-        photoTitle: "Cihê wêne",
-        photoHint: "Wêneyê herî baş ê Serkan li vir bikin. (dibistan / rojane / samîmî)",
-        photoTip: "Tiştekî baş: Wêneyê ‘hero’ rûpelê zêde xweş dike.",
-        signLabel: "ÎMZE",
-        stamp1: "Serkan Buğan",
-        stamp2: "Stenbol • Çekmeköy",
-        card1t: "🎯 Şêwaz",
-        card1p:
-          "Samîmiyet + disîplîn. Şêwazek ku baweriyê ava dike û alîkar e—bi taybetî ji bo zarokan. Perwerdeya baş bi dilê baş mezin dibe.",
-        card2t: "🌿 Jiyan",
-        card2p:
-          "Hezkirina heywanan sabir û dilovanî fêr dike. Pisîk her roj wê bîr dikin. Werzîş jî wekî ‘reset’ e ji bo hiş.",
-        card3t: "🏫 Perwerde",
-        card3p:
-          "Fêr kirin tenê gotin nîne—ew jî dilsozî û cesaret dayîn e. Bêjeyek piçûk dikare rêya zarokek biguherîne.",
-        card4t: "🎵 Muzîk",
-        card4p:
-          "Di muzîka Kurdî de hest û rîtm taybet e. Rê, tempo û ruh… hemû bi hev re.",
-        catChip: "Şadîya Malê",
-        catChip2: "Serekê Biçûk",
-        catChip3: "Hêza Aram",
-        lorin: "Merakdar, lîstikvan, û bi çavên xwe dibêje “Ez li vir im.”",
-        rojo: "Qanûnên malê bê deng datîne. Tenê nihêrîn têra ye.",
-        solin: "Aram, nerm û aşîtî. Li kêleka wî/ê roj xweş dibe.",
-        spTitle: "🎧 Playlist a Serkan",
-        spSub: "Girêdana Spotify embed li vir bidê da lêbide",
-      }
-    };
+<section>
+  <div class="cards">
+    <div class="card">
+      <h3>🎓 Eğitim</h3>
+      <p>Samimi, disiplinli ve güven veren bir yaklaşım.</p>
+    </div>
+    <div class="card">
+      <h3>🐾 Kediler</h3>
+      <p>Lorin • Rojo • Solin — evin ruhu.</p>
+    </div>
+    <div class="card">
+      <h3>🎵 Müzik</h3>
+      <p>Kürtçe müzik, ritim ve duygu.</p>
+    </div>
+  </div>
+</section>
 
-    function setLang(lang){
-      document.querySelectorAll("[data-i18n]").forEach(el=>{
-        const k = el.getAttribute("data-i18n");
-        if(dict[lang] && dict[lang][k]) el.textContent = dict[lang][k];
-      });
-      document.querySelectorAll(".langbtn").forEach(b=>{
-        b.classList.toggle("active", b.dataset.lang === lang);
-      });
-      document.documentElement.lang = lang === "en" ? "en" : "tr";
-    }
+<section>
+  <h2>Spor</h2>
+  <div class="gallery">
+    <img src="images/2.jpg" alt="Spor fotoğrafı">
+    <img src="images/3.jpg" alt="Spor fotoğrafı">
+  </div>
+</section>
 
-    document.querySelectorAll(".langbtn").forEach(btn=>{
-      btn.addEventListener("click", ()=> setLang(btn.dataset.lang));
-    });
-  </script>
+<footer>
+  © 2025 Serkan Buğan — İstanbul / Çekmeköy
+</footer>
+
+</div>
 </body>
 </html>
